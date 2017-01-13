@@ -1,0 +1,61 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+	targetNamespace="http://spring.io/guides/gs-producing-web-service"
+	elementFormDefault="qualified">
+
+	<xs:element name="getWeatherRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="cityName" type="xs:string" maxOccurs="unbounded"
+					minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getWeatherResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="weatherSoap" type="tns:weatherSoap"
+					maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="weatherSoap">
+		<xs:sequence>
+			<xs:element name="location" type="xs:string" />
+			<xs:element name="observationTime" type="xs:string" />
+			<xs:element name="temperatureCelsius" type="xs:string" />
+			<xs:element name="relativeHumidity" type="xs:string" />
+			<xs:element name="windSpeed" type="xs:string" />
+			<xs:element name="windDirection" type="tns:windDirection" />
+			<xs:element name="weatherDescription" type="xs:string" />
+			<xs:element name="windDescription" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="windDirection">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="East" />
+			<xs:enumeration value="ENE" />
+			<xs:enumeration value="ESE" />
+			<xs:enumeration value="NE" />
+			<xs:enumeration value="NNE" />
+			<xs:enumeration value="NNW" />
+			<xs:enumeration value="North" />
+			<xs:enumeration value="NW" />
+			<xs:enumeration value="SE" />
+			<xs:enumeration value="South" />
+			<xs:enumeration value="SSE" />
+			<xs:enumeration value="SSW" />
+			<xs:enumeration value="SW" />
+			<xs:enumeration value="Variable" />
+			<xs:enumeration value="West" />
+			<xs:enumeration value="WNW" />
+			<xs:enumeration value="WSW" />
+			<xs:enumeration value="ESE" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+
+</xs:schema>
