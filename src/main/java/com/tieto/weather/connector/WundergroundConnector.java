@@ -5,7 +5,7 @@ import generated.Response;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import com.tieto.weather.PropertiesFactory;
+import com.tieto.weather.config.PropertiesFactory;
 import com.tieto.weather.model.WeatherCity;
 
 @Component

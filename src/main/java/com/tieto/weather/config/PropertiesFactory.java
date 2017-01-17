@@ -1,4 +1,4 @@
-package com.tieto.weather;
+package com.tieto.weather.config;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.tieto.weather.service;
+package com.tieto.weather.config;
 
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;

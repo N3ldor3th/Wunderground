@@ -9,8 +9,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import com.tieto.weather.PropertiesFactory;
-import com.tieto.weather.SupportedCities;
+import com.tieto.weather.config.PropertiesFactory;
+import com.tieto.weather.config.SupportedCities;
 import com.tieto.weather.connector.WundergroundConnector;
 import com.tieto.weather.model.WeatherCity;
 

@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.tieto.weather.config.PropertiesFactory;
+import com.tieto.weather.config.SupportedCities;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

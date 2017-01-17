@@ -27,8 +27,7 @@ public class WeatherSoapMapper {
 			target.setWindDirection(source.getWindDirection());
 			target.setWindSpeed(String.valueOf(source.getWindSpeed()) + " km/h");		
 		}
-		
-		
+
 		return target;
 	}
 	
